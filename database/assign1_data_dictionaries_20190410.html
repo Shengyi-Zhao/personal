@@ -1,0 +1,452 @@
+<html><head>
+<title>Schema Report for database: mydb</title>
+<style>
+        td,th {
+        text-align:left;
+        vertical-align:middle;
+        }
+        table {
+        border-collapse: collapse;
+        border: 1px solid;
+        }
+        caption, th, td {
+        padding: .2em .8em;
+        border: 1px solid #000000;
+        }
+        caption {
+        background: #D3D3D3;
+        font-weight: bold;
+        font-size: 1.1em;
+        }
+        th {
+        font-weight: bold;
+        background: #000000;
+        color: white;
+        }
+        td {
+        background: #FFFFFF;
+        }
+        </style>
+      </head>
+     <body>
+<h1>Schema Report for database: mydb</h1>
+<a id="home">Table List </a><br /><ul>
+<li><a href="#User">User </a></li>
+<li><a href="#Food">Food </a></li>
+<li><a href="#weight">weight </a></li>
+<li><a href="#Target">Target </a></li>
+<li><a href="#ExerciseDiary">ExerciseDiary </a></li>
+<li><a href="#FoodDiary">FoodDiary </a></li>
+<li><a href="#DailySummary">DailySummary </a></li>
+<li><a href="#Reminder">Reminder </a></li>
+<li><a href="#Topic">Topic </a></li>
+<li><a href="#Forum">Forum </a></li>
+<li><a href="#Reply">Reply </a></li>
+<li><a href="#MateRecord">MateRecord </a></li>
+<li><a href="#MateStatus">MateStatus </a></li>
+<li><a href="#Blog">Blog </a></li>
+<li><a href="#Like">Like </a></li>
+<li><a href="#Blocking">Blocking </a></li>
+<li><a href="#Message">Message </a></li>
+<li><a href="#Report">Report </a></li>
+<li><a href="#Meal">Meal </a></li>
+<li><a href="#Activity">Activity </a></li>
+<li><a href="#MealIngredient">MealIngredient </a></li>
+<li><a href="#MicroBlogAndVlog">MicroBlogAndVlog </a></li>
+<li><a href="#Vlog">Vlog </a></li>
+</ul>
+<a id="User"></a><table style="width:100%"><caption>Table: User </caption>
+<tr><td>Table Comments</td><td colspan="6"></td></tr>
+<tr><td colspan="7">Columns</td></tr>
+        <tr>
+        <th>Name</th>
+        <th>Data Type</th>
+        <th>Nullable</th>
+        <th>PK</th>
+        <th>FK</th>
+        <th>Default</th>
+        <th>Comment</th>
+        </tr>
+<tr><td>username</td><td>VARCHAR(45)</td><td>Yes</td><td>Yes</td><td>No</td><td></td><td></td></tr>
+<tr><td>firstName</td><td>VARCHAR(45)</td><td>Yes</td><td>No</td><td>No</td><td></td><td></td></tr>
+<tr><td>lastName</td><td>VARCHAR(45)</td><td>Yes</td><td>No</td><td>No</td><td></td><td></td></tr>
+<tr><td>sex</td><td>VARCHAR(45)</td><td>Yes</td><td>No</td><td>No</td><td></td><td></td></tr>
+<tr><td>emailAddress</td><td>VARCHAR(45)</td><td>Yes</td><td>No</td><td>No</td><td></td><td></td></tr>
+<tr><td>photograph</td><td>BLOB</td><td>Yes</td><td>No</td><td>No</td><td></td><td></td></tr>
+<tr><td>visibility</td><td>BINARY(1)</td><td>Yes</td><td>No</td><td>No</td><td></td><td>1 for visible and 0 for not visible</td></tr>
+<tr><td>joinDate</td><td>DATETIME</td><td>Yes</td><td>No</td><td>No</td><td></td><td></td></tr>
+</table><a href="#home">Table List </a></br>
+<a id="Food"></a><table style="width:100%"><caption>Table: Food </caption>
+<tr><td>Table Comments</td><td colspan="6"></td></tr>
+<tr><td colspan="7">Columns</td></tr>
+        <tr>
+        <th>Name</th>
+        <th>Data Type</th>
+        <th>Nullable</th>
+        <th>PK</th>
+        <th>FK</th>
+        <th>Default</th>
+        <th>Comment</th>
+        </tr>
+<tr><td>foodID</td><td>INT</td><td>Yes</td><td>Yes</td><td>No</td><td></td><td></td></tr>
+<tr><td>foodName</td><td>VARCHAR(45)</td><td>Yes</td><td>No</td><td>No</td><td></td><td></td></tr>
+<tr><td>username</td><td>VARCHAR(45)</td><td>Yes</td><td>No</td><td>Yes</td><td></td><td></td></tr>
+<tr><td>energy</td><td>DECIMAL(1)</td><td>Yes</td><td>No</td><td>No</td><td></td><td></td></tr>
+<tr><td>fat</td><td>DECIMAL(1)</td><td>No</td><td>No</td><td>No</td><td></td><td></td></tr>
+<tr><td>protein</td><td>DECIMAL(1)</td><td>No</td><td>No</td><td>No</td><td></td><td></td></tr>
+<tr><td>sodium</td><td>DECIMAL(1)</td><td>No</td><td>No</td><td>No</td><td></td><td></td></tr>
+<tr><td>carbonhydrate</td><td>DECIMAL(1)</td><td>No</td><td>No</td><td>No</td><td></td><td></td></tr>
+</table><a href="#home">Table List </a></br>
+<a id="weight"></a><table style="width:100%"><caption>Table: weight </caption>
+<tr><td>Table Comments</td><td colspan="6"></td></tr>
+<tr><td colspan="7">Columns</td></tr>
+        <tr>
+        <th>Name</th>
+        <th>Data Type</th>
+        <th>Nullable</th>
+        <th>PK</th>
+        <th>FK</th>
+        <th>Default</th>
+        <th>Comment</th>
+        </tr>
+<tr><td>username</td><td>INT</td><td>Yes</td><td>Yes</td><td>Yes</td><td></td><td></td></tr>
+<tr><td>date</td><td>DATETIME</td><td>Yes</td><td>Yes</td><td>No</td><td></td><td></td></tr>
+<tr><td>weight</td><td>DECIMAL(1)</td><td>Yes</td><td>No</td><td>No</td><td></td><td></td></tr>
+</table><a href="#home">Table List </a></br>
+<a id="Target"></a><table style="width:100%"><caption>Table: Target </caption>
+<tr><td>Table Comments</td><td colspan="6"></td></tr>
+<tr><td colspan="7">Columns</td></tr>
+        <tr>
+        <th>Name</th>
+        <th>Data Type</th>
+        <th>Nullable</th>
+        <th>PK</th>
+        <th>FK</th>
+        <th>Default</th>
+        <th>Comment</th>
+        </tr>
+<tr><td>username</td><td>INT</td><td>Yes</td><td>Yes</td><td>Yes</td><td></td><td></td></tr>
+<tr><td>date</td><td>DATETIME</td><td>Yes</td><td>Yes</td><td>No</td><td></td><td>The date when the target was set</td></tr>
+<tr><td>dailyCarbohydrate</td><td>INT</td><td>No</td><td>No</td><td>No</td><td></td><td></td></tr>
+<tr><td>dailyFat</td><td>INT</td><td>No</td><td>No</td><td>No</td><td></td><td></td></tr>
+<tr><td>dailyProtein</td><td>INT</td><td>No</td><td>No</td><td>No</td><td></td><td></td></tr>
+<tr><td>targetWeight</td><td>DECIMAL(1)</td><td>No</td><td>No</td><td>No</td><td></td><td></td></tr>
+</table><a href="#home">Table List </a></br>
+<a id="ExerciseDiary"></a><table style="width:100%"><caption>Table: ExerciseDiary </caption>
+<tr><td>Table Comments</td><td colspan="6"></td></tr>
+<tr><td colspan="7">Columns</td></tr>
+        <tr>
+        <th>Name</th>
+        <th>Data Type</th>
+        <th>Nullable</th>
+        <th>PK</th>
+        <th>FK</th>
+        <th>Default</th>
+        <th>Comment</th>
+        </tr>
+<tr><td>idExerciseDiary</td><td>INT</td><td>Yes</td><td>Yes</td><td>No</td><td></td><td></td></tr>
+<tr><td>dailySummayID</td><td>VARCHAR(45)</td><td>Yes</td><td>No</td><td>Yes</td><td></td><td></td></tr>
+<tr><td>activity</td><td>VARCHAR(45)</td><td>Yes</td><td>No</td><td>Yes</td><td></td><td>Type of activity</td></tr>
+<tr><td>timeDuration</td><td>DECIMAL(2)</td><td>Yes</td><td>No</td><td>No</td><td></td><td>Time duration of the activity in hours</td></tr>
+</table><a href="#home">Table List </a></br>
+<a id="FoodDiary"></a><table style="width:100%"><caption>Table: FoodDiary </caption>
+<tr><td>Table Comments</td><td colspan="6"></td></tr>
+<tr><td colspan="7">Columns</td></tr>
+        <tr>
+        <th>Name</th>
+        <th>Data Type</th>
+        <th>Nullable</th>
+        <th>PK</th>
+        <th>FK</th>
+        <th>Default</th>
+        <th>Comment</th>
+        </tr>
+<tr><td>idfoodDiary</td><td>INT</td><td>Yes</td><td>Yes</td><td>No</td><td></td><td></td></tr>
+<tr><td>dailySummaryID</td><td>INT</td><td>Yes</td><td>No</td><td>Yes</td><td></td><td></td></tr>
+<tr><td>mealOrFoodID</td><td>INT</td><td>Yes</td><td>No</td><td>Yes</td><td></td><td>Could be a mealID from Table Meal or a foodID from Table Food.</td></tr>
+<tr><td>mealType</td><td>VARCHAR(45)</td><td>Yes</td><td>No</td><td>No</td><td></td><td>Type of meals, like “Breakfast”, “Lunch”, “Dinner” or “Snacks”.</td></tr>
+<tr><td>amount</td><td>VARCHAR(45)</td><td>Yes</td><td>No</td><td>No</td><td></td><td>Number of units of food or meal has been taken</td></tr>
+<tr><td>unit</td><td>VARCHAR(45)</td><td>Yes</td><td>No</td><td>No</td><td></td><td>Unit of food or meal.</td></tr>
+</table><a href="#home">Table List </a></br>
+<a id="DailySummary"></a><table style="width:100%"><caption>Table: DailySummary </caption>
+<tr><td>Table Comments</td><td colspan="6"></td></tr>
+<tr><td colspan="7">Columns</td></tr>
+        <tr>
+        <th>Name</th>
+        <th>Data Type</th>
+        <th>Nullable</th>
+        <th>PK</th>
+        <th>FK</th>
+        <th>Default</th>
+        <th>Comment</th>
+        </tr>
+<tr><td>dailySummaryID</td><td>VARCHAR(45)</td><td>Yes</td><td>Yes</td><td>No</td><td></td><td></td></tr>
+<tr><td>username</td><td>VARCHAR(45)</td><td>Yes</td><td>No</td><td>Yes</td><td></td><td></td></tr>
+<tr><td>date</td><td>VARCHAR(45)</td><td>Yes</td><td>No</td><td>No</td><td></td><td></td></tr>
+</table><a href="#home">Table List </a></br>
+<a id="Reminder"></a><table style="width:100%"><caption>Table: Reminder </caption>
+<tr><td>Table Comments</td><td colspan="6"></td></tr>
+<tr><td colspan="7">Columns</td></tr>
+        <tr>
+        <th>Name</th>
+        <th>Data Type</th>
+        <th>Nullable</th>
+        <th>PK</th>
+        <th>FK</th>
+        <th>Default</th>
+        <th>Comment</th>
+        </tr>
+<tr><td>reminderID</td><td>INT</td><td>Yes</td><td>Yes</td><td>No</td><td></td><td></td></tr>
+<tr><td>username</td><td>VARCHAR(45)</td><td>Yes</td><td>No</td><td>Yes</td><td></td><td></td></tr>
+<tr><td>time</td><td>DATETIME</td><td>Yes</td><td>No</td><td>No</td><td></td><td>The time that the user was reminded</td></tr>
+<tr><td>reminderType</td><td>VARCHAR(45)</td><td>Yes</td><td>No</td><td>No</td><td></td><td>Type of Reminder, like “No data has been entered”, or “have drunk less than 2 glasses of water today”.</td></tr>
+</table><a href="#home">Table List </a></br>
+<a id="Topic"></a><table style="width:100%"><caption>Table: Topic </caption>
+<tr><td>Table Comments</td><td colspan="6"></td></tr>
+<tr><td colspan="7">Columns</td></tr>
+        <tr>
+        <th>Name</th>
+        <th>Data Type</th>
+        <th>Nullable</th>
+        <th>PK</th>
+        <th>FK</th>
+        <th>Default</th>
+        <th>Comment</th>
+        </tr>
+<tr><td>topicID</td><td>INT</td><td>Yes</td><td>Yes</td><td>No</td><td></td><td></td></tr>
+<tr><td>username</td><td>VARCHAR(45)</td><td>Yes</td><td>No</td><td>Yes</td><td></td><td></td></tr>
+<tr><td>forumID</td><td>VARCHAR(45)</td><td>Yes</td><td>No</td><td>Yes</td><td></td><td></td></tr>
+<tr><td>topicName</td><td>VARCHAR(45)</td><td>Yes</td><td>No</td><td>No</td><td></td><td>The name of the topic</td></tr>
+<tr><td>date</td><td>DATETIME</td><td>Yes</td><td>No</td><td>No</td><td></td><td></td></tr>
+<tr><td>content</td><td>VARCHAR(300)</td><td>Yes</td><td>No</td><td>No</td><td></td><td>The content of the topic</td></tr>
+</table><a href="#home">Table List </a></br>
+<a id="Forum"></a><table style="width:100%"><caption>Table: Forum </caption>
+<tr><td>Table Comments</td><td colspan="6"></td></tr>
+<tr><td colspan="7">Columns</td></tr>
+        <tr>
+        <th>Name</th>
+        <th>Data Type</th>
+        <th>Nullable</th>
+        <th>PK</th>
+        <th>FK</th>
+        <th>Default</th>
+        <th>Comment</th>
+        </tr>
+<tr><td>forumID</td><td>INT</td><td>Yes</td><td>Yes</td><td>No</td><td></td><td></td></tr>
+<tr><td>forumTopic</td><td>VARCHAR(45)</td><td>Yes</td><td>No</td><td>No</td><td></td><td>Forum topics, which has five classes in specific</td></tr>
+</table><a href="#home">Table List </a></br>
+<a id="Reply"></a><table style="width:100%"><caption>Table: Reply </caption>
+<tr><td>Table Comments</td><td colspan="6"></td></tr>
+<tr><td colspan="7">Columns</td></tr>
+        <tr>
+        <th>Name</th>
+        <th>Data Type</th>
+        <th>Nullable</th>
+        <th>PK</th>
+        <th>FK</th>
+        <th>Default</th>
+        <th>Comment</th>
+        </tr>
+<tr><td>replyID</td><td>INT</td><td>Yes</td><td>Yes</td><td>No</td><td></td><td></td></tr>
+<tr><td>topicID</td><td>VARCHAR(45)</td><td>Yes</td><td>No</td><td>Yes</td><td></td><td>The ID of the topic it replied to</td></tr>
+<tr><td>username</td><td>VARCHAR(45)</td><td>Yes</td><td>No</td><td>Yes</td><td></td><td></td></tr>
+<tr><td>content</td><td>VARCHAR(300)</td><td>Yes</td><td>No</td><td>No</td><td></td><td></td></tr>
+</table><a href="#home">Table List </a></br>
+<a id="MateRecord"></a><table style="width:100%"><caption>Table: MateRecord </caption>
+<tr><td>Table Comments</td><td colspan="6"></td></tr>
+<tr><td colspan="7">Columns</td></tr>
+        <tr>
+        <th>Name</th>
+        <th>Data Type</th>
+        <th>Nullable</th>
+        <th>PK</th>
+        <th>FK</th>
+        <th>Default</th>
+        <th>Comment</th>
+        </tr>
+<tr><td>mateRecordID</td><td>INT</td><td>Yes</td><td>Yes</td><td>No</td><td></td><td></td></tr>
+<tr><td>username1</td><td>VARCHAR(45)</td><td>Yes</td><td>No</td><td>Yes</td><td></td><td>The request sender user</td></tr>
+<tr><td>username2</td><td>VARCHAR(45)</td><td>Yes</td><td>No</td><td>No</td><td></td><td>The request receiver user</td></tr>
+<tr><td>requestType</td><td>VARCHAR(45)</td><td>Yes</td><td>No</td><td>No</td><td></td><td>Type of requests, like “friend request” or “unfriend request”.</td></tr>
+<tr><td>time</td><td>DATETIME</td><td>Yes</td><td>No</td><td>No</td><td></td><td>Time sent the request</td></tr>
+<tr><td>result</td><td>BINARY(1)</td><td>Yes</td><td>No</td><td>No</td><td></td><td>1 for request succeeds, and 2 for request failed.</td></tr>
+</table><a href="#home">Table List </a></br>
+<a id="MateStatus"></a><table style="width:100%"><caption>Table: MateStatus </caption>
+<tr><td>Table Comments</td><td colspan="6"></td></tr>
+<tr><td colspan="7">Columns</td></tr>
+        <tr>
+        <th>Name</th>
+        <th>Data Type</th>
+        <th>Nullable</th>
+        <th>PK</th>
+        <th>FK</th>
+        <th>Default</th>
+        <th>Comment</th>
+        </tr>
+<tr><td>username</td><td>VARCHAR(45)</td><td>Yes</td><td>Yes</td><td>Yes</td><td></td><td></td></tr>
+<tr><td>object</td><td>VARCHAR(45)</td><td>Yes</td><td>No</td><td>No</td><td></td><td>The user object that the user has relationship with</td></tr>
+<tr><td>relationship</td><td>VARCHAR(45)</td><td>Yes</td><td>No</td><td>No</td><td></td><td></td></tr>
+</table><a href="#home">Table List </a></br>
+<a id="Blog"></a><table style="width:100%"><caption>Table: Blog </caption>
+<tr><td>Table Comments</td><td colspan="6"></td></tr>
+<tr><td colspan="7">Columns</td></tr>
+        <tr>
+        <th>Name</th>
+        <th>Data Type</th>
+        <th>Nullable</th>
+        <th>PK</th>
+        <th>FK</th>
+        <th>Default</th>
+        <th>Comment</th>
+        </tr>
+<tr><td>blogID</td><td>INT</td><td>Yes</td><td>Yes</td><td>Yes</td><td></td><td></td></tr>
+<tr><td>content</td><td>TEXT(300)</td><td>Yes</td><td>No</td><td>No</td><td></td><td></td></tr>
+</table><a href="#home">Table List </a></br>
+<a id="Like"></a><table style="width:100%"><caption>Table: Like </caption>
+<tr><td>Table Comments</td><td colspan="6"></td></tr>
+<tr><td colspan="7">Columns</td></tr>
+        <tr>
+        <th>Name</th>
+        <th>Data Type</th>
+        <th>Nullable</th>
+        <th>PK</th>
+        <th>FK</th>
+        <th>Default</th>
+        <th>Comment</th>
+        </tr>
+<tr><td>blogID</td><td>INT</td><td>Yes</td><td>Yes</td><td>Yes</td><td></td><td></td></tr>
+<tr><td>username</td><td>VARCHAR(45)</td><td>Yes</td><td>Yes</td><td>No</td><td></td><td>The user who pressed a like</td></tr>
+<tr><td>time</td><td>DATETIME</td><td>Yes</td><td>Yes</td><td>No</td><td></td><td></td></tr>
+</table><a href="#home">Table List </a></br>
+<a id="Blocking"></a><table style="width:100%"><caption>Table: Blocking </caption>
+<tr><td>Table Comments</td><td colspan="6"></td></tr>
+<tr><td colspan="7">Columns</td></tr>
+        <tr>
+        <th>Name</th>
+        <th>Data Type</th>
+        <th>Nullable</th>
+        <th>PK</th>
+        <th>FK</th>
+        <th>Default</th>
+        <th>Comment</th>
+        </tr>
+<tr><td>blockingID</td><td>INT</td><td>Yes</td><td>Yes</td><td>No</td><td></td><td></td></tr>
+<tr><td>username1</td><td>VARCHAR(45)</td><td>Yes</td><td>No</td><td>Yes</td><td></td><td>The user sent the block request</td></tr>
+<tr><td>username2</td><td>VARCHAR(45)</td><td>Yes</td><td>No</td><td>No</td><td></td><td>The user who was blocked</td></tr>
+<tr><td>time</td><td>DATETIME</td><td>Yes</td><td>No</td><td>No</td><td></td><td>The time blocking happened</td></tr>
+</table><a href="#home">Table List </a></br>
+<a id="Message"></a><table style="width:100%"><caption>Table: Message </caption>
+<tr><td>Table Comments</td><td colspan="6"></td></tr>
+<tr><td colspan="7">Columns</td></tr>
+        <tr>
+        <th>Name</th>
+        <th>Data Type</th>
+        <th>Nullable</th>
+        <th>PK</th>
+        <th>FK</th>
+        <th>Default</th>
+        <th>Comment</th>
+        </tr>
+<tr><td>messageID</td><td>INT</td><td>Yes</td><td>Yes</td><td>No</td><td></td><td></td></tr>
+<tr><td>sender</td><td>VARCHAR(45)</td><td>Yes</td><td>No</td><td>Yes</td><td></td><td></td></tr>
+<tr><td>receiver</td><td>VARCHAR(45)</td><td>Yes</td><td>No</td><td>No</td><td></td><td></td></tr>
+<tr><td>time</td><td>DATETIME</td><td>Yes</td><td>No</td><td>No</td><td></td><td></td></tr>
+<tr><td>content</td><td>VARCHAR(140)</td><td>Yes</td><td>No</td><td>No</td><td></td><td>The content of the message</td></tr>
+</table><a href="#home">Table List </a></br>
+<a id="Report"></a><table style="width:100%"><caption>Table: Report </caption>
+<tr><td>Table Comments</td><td colspan="6"></td></tr>
+<tr><td colspan="7">Columns</td></tr>
+        <tr>
+        <th>Name</th>
+        <th>Data Type</th>
+        <th>Nullable</th>
+        <th>PK</th>
+        <th>FK</th>
+        <th>Default</th>
+        <th>Comment</th>
+        </tr>
+<tr><td>reportID</td><td>INT</td><td>Yes</td><td>Yes</td><td>No</td><td></td><td></td></tr>
+<tr><td>username1</td><td>VARCHAR(45)</td><td>Yes</td><td>No</td><td>Yes</td><td></td><td>The user who sent the report request</td></tr>
+<tr><td>username2</td><td>VARCHAR(45)</td><td>Yes</td><td>No</td><td>No</td><td></td><td>The user who was reported</td></tr>
+<tr><td>time</td><td>DATETIME</td><td>Yes</td><td>No</td><td>No</td><td></td><td></td></tr>
+</table><a href="#home">Table List </a></br>
+<a id="Meal"></a><table style="width:100%"><caption>Table: Meal </caption>
+<tr><td>Table Comments</td><td colspan="6"></td></tr>
+<tr><td colspan="7">Columns</td></tr>
+        <tr>
+        <th>Name</th>
+        <th>Data Type</th>
+        <th>Nullable</th>
+        <th>PK</th>
+        <th>FK</th>
+        <th>Default</th>
+        <th>Comment</th>
+        </tr>
+<tr><td>mealID</td><td>INT</td><td>Yes</td><td>Yes</td><td>No</td><td></td><td></td></tr>
+<tr><td>creater</td><td>VARCHAR(45)</td><td>Yes</td><td>No</td><td>Yes</td><td></td><td>The user who created the meal</td></tr>
+</table><a href="#home">Table List </a></br>
+<a id="Activity"></a><table style="width:100%"><caption>Table: Activity </caption>
+<tr><td>Table Comments</td><td colspan="6"></td></tr>
+<tr><td colspan="7">Columns</td></tr>
+        <tr>
+        <th>Name</th>
+        <th>Data Type</th>
+        <th>Nullable</th>
+        <th>PK</th>
+        <th>FK</th>
+        <th>Default</th>
+        <th>Comment</th>
+        </tr>
+<tr><td>activityName</td><td>VARCHAR(45)</td><td>Yes</td><td>Yes</td><td>No</td><td></td><td></td></tr>
+<tr><td>maleCaloryExplended</td><td>INT</td><td>Yes</td><td>No</td><td>No</td><td></td><td>Calories explended per hour by a male doing the activity</td></tr>
+<tr><td>femaleCaloryExplended</td><td>INT</td><td>Yes</td><td>No</td><td>No</td><td></td><td>Calories explended per hour by a female doing the activity</td></tr>
+</table><a href="#home">Table List </a></br>
+<a id="MealIngredient"></a><table style="width:100%"><caption>Table: MealIngredient </caption>
+<tr><td>Table Comments</td><td colspan="6"></td></tr>
+<tr><td colspan="7">Columns</td></tr>
+        <tr>
+        <th>Name</th>
+        <th>Data Type</th>
+        <th>Nullable</th>
+        <th>PK</th>
+        <th>FK</th>
+        <th>Default</th>
+        <th>Comment</th>
+        </tr>
+<tr><td>mealID</td><td>INT</td><td>Yes</td><td>Yes</td><td>Yes</td><td></td><td></td></tr>
+<tr><td>foodID</td><td>INT</td><td>Yes</td><td>Yes</td><td>Yes</td><td></td><td></td></tr>
+<tr><td>foodAmount</td><td>INT</td><td>Yes</td><td>No</td><td>No</td><td></td><td></td></tr>
+<tr><td>foodUnit</td><td>VARCHAR(45)</td><td>Yes</td><td>No</td><td>No</td><td></td><td>The unit of food, like cup, slice or piece.</td></tr>
+</table><a href="#home">Table List </a></br>
+<a id="MicroBlogAndVlog"></a><table style="width:100%"><caption>Table: MicroBlogAndVlog </caption>
+<tr><td>Table Comments</td><td colspan="6"></td></tr>
+<tr><td colspan="7">Columns</td></tr>
+        <tr>
+        <th>Name</th>
+        <th>Data Type</th>
+        <th>Nullable</th>
+        <th>PK</th>
+        <th>FK</th>
+        <th>Default</th>
+        <th>Comment</th>
+        </tr>
+<tr><td>blogOrVlogID</td><td>INT</td><td>Yes</td><td>Yes</td><td>No</td><td></td><td></td></tr>
+<tr><td>username</td><td>VARCHAR(45)</td><td>Yes</td><td>No</td><td>Yes</td><td></td><td>The user who posted the blog or vlog</td></tr>
+<tr><td>date</td><td>DATETIME</td><td>Yes</td><td>No</td><td>No</td><td></td><td></td></tr>
+</table><a href="#home">Table List </a></br>
+<a id="Vlog"></a><table style="width:100%"><caption>Table: Vlog </caption>
+<tr><td>Table Comments</td><td colspan="6"></td></tr>
+<tr><td colspan="7">Columns</td></tr>
+        <tr>
+        <th>Name</th>
+        <th>Data Type</th>
+        <th>Nullable</th>
+        <th>PK</th>
+        <th>FK</th>
+        <th>Default</th>
+        <th>Comment</th>
+        </tr>
+<tr><td>vlogID</td><td>INT</td><td>Yes</td><td>Yes</td><td>Yes</td><td></td><td></td></tr>
+<tr><td>content</td><td>BLOB</td><td>No</td><td>No</td><td>No</td><td></td><td></td></tr>
+</table><a href="#home">Table List </a></br>
+</body></html>
